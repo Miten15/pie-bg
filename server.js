@@ -9,6 +9,9 @@ const countryRouter = require("./routes/country");
 const placeRouter = require("./routes/place");
 const hotelRouter = require("./routes/hotel");
 const reviewRouter = require("./routes/review");
+const stateRouter = require("./routes/state");
+const templesRouter = require("./routes/temples.js");
+
 const PORT = 5003;
 const HOST = "192.168.0.151"; // Replace 'your-ip-address' with your actual IP address
 
@@ -27,6 +30,10 @@ app.use('/api/countries', countryRouter);
 app.use('/api/places', placeRouter);
 app.use('/api/hotels', hotelRouter);
 app.use('/api/reviews', reviewRouter);
+app.use('/api/state',stateRouter);
+app.use('/api/temples', templesRouter);
+
+// Start the server
 
 app.listen(PORT, HOST, () => {
     console.log(`Server is running on http://${HOST}:${PORT}`);

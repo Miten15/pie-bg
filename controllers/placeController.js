@@ -88,7 +88,7 @@ module.exports = {
             [
                 {
                   $search: {
-                    index: "places",
+                    index: "default",
                     text: {
                       query: req.params.key,
                       path: {

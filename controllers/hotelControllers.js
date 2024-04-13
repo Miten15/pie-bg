@@ -48,7 +48,7 @@ module.exports = {
         const limit = parseInt(limitParam)
 
         try {
-            const hotels = await Hotel.find({country_id: countryId }, '_id review rating imageUrl title country_id location')
+            const hotels = await Hotel.find({country_id: countryId }, '_id review rating imageUrl title country_id location ')
             .limit(limit)
 
             if(hotels.length === 0){
