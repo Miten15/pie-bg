@@ -7,8 +7,8 @@ module.exports = {
 
             res.status(200).json({status: true, message: "User succesfully deleted"})
         } catch (error) {
-            return next(error)
-        }
+            return next(error) }
+        
     },
 
     getUser: async (req, res, next) => {
